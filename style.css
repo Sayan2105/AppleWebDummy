@@ -1,0 +1,185 @@
+body{
+    font-family: monospace, monospace;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
+}
+
+@keyframes rotateImg{
+    from {
+     transform: rotate(0deg);
+    }
+   to {
+    transform: rotate(359deg);
+   }
+}  
+
+@keyframes fadeinout {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+.hero{
+    height: 700px;
+    color: white;
+    animation: fadeinout 5s linear forwards;
+}
+
+.features{
+    margin-left: 9%;
+    color: white;
+}
+
+.hidden{
+    opacity: 0;
+    transform:translateY(110px);
+}
+
+.Info{
+    display: none;
+    font-size:larger;
+}
+
+.show{
+    animation: fadeinout 2s linear backwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form label,
+.form button{
+    margin: 5px;
+}
+
+.form input{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-bottom: 20px;
+}
+
+.form{
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    /* border: 1px white inset; */
+    width: 90%;
+    position: relative;
+    left: 10%;
+}
+
+.buy{
+    font-family: Helvetica , Sans-Serif;
+    letter-spacing: 2px;
+    color: white;
+    text-align: left;
+    height: 100vh;
+}
+
+.buy div{
+    position: relative;
+    top: 20%;
+}
+
+.col{
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.8);
+    transition: transform 0.5s;
+    border: grey 1px solid;
+    width: 250px;
+    margin-right: 120px;
+}
+
+.buy-text{
+    position: relative;
+    margin-top: 100px;
+}
+
+.col:hover{
+    box-shadow: 5px 5px 20px rgba(49, 126, 177, 0.8);
+    transform: scale(1.5);
+    height: 300px;
+}
+
+.col:hover .Info{
+    display: block;
+    font-size: smaller;
+}
+
+.circle {
+    animation: rotateImg 30s linear infinite;
+    width: 610px; 
+    height: 610px;
+    border: 2px solid white; 
+    border-radius: 50%;
+}
+  
+
+.feature{
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+
+.gap{
+    height: 10px;
+}
+
+.bi{
+    height: 120px;
+    width: 120px;
+}
+
+.heading{
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+}
+
+.Landing-img{
+    z-index: 1;
+    animation: rotateImg 30s linear infinite;
+    position: absolute;
+    top: 11%;
+    right: 7%;
+    width: 45%;
+}
+
+/* Address */
+
+
+
+/* scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(49, 49, 49);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+    width: 6px;
+  }
